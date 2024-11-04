@@ -99,9 +99,12 @@ for file, cluster in zip(filenames,kmeans.labels_):
     else:
         groups[cluster].append(file)
 
+print(groups)
+
+'''
 # function that lets you view a cluster (based on identifier)        
 def view_cluster(cluster):
-    plt.figure(figsize = (25,25));
+    plt.figure(figsize = (25,25))
     # gets the list of filenames for a cluster
     files = groups[cluster]
     # only allow up to 30 images to be shown at a time
@@ -131,4 +134,6 @@ for k in list_k:
 plt.figure(figsize=(6, 6))
 plt.plot(list_k, sse)
 plt.xlabel(r'Number of clusters *k*')
-plt.ylabel('Sum of squared distance');
+plt.ylabel('Sum of squared distance')
+
+'''
